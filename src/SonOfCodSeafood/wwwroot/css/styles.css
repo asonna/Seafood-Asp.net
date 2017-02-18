@@ -1,3 +1,59 @@
 ﻿body {
-    background-color: antiquewhite;
+    background-color: lightgray;
 }
+
+hr {
+    padding-bottom: 3%;
+}
+
+h1 {
+    font-size: 75px;
+    font-family: Papyrus;
+    font-weight: bold;
+    color: darkslategray;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: steelblue;
+}
+
+.MainTitle {
+    text-align: center;
+    padding-bottom: 3%;
+    padding-top: 3%;
+}
+
+.container {
+    background-color: white;
+}
+
+.nav {
+  color: maroon;
+  font-weight: bold;
+  font-family: sans-serif, Papyrus;
+  font-size: 20px;
+  text-align: center;
+  /*background-color: Highlight;*/
+  color: white;
+}
+
+.nav ul {
+  /*padding: 5px;*/
+  float: left;
+  list-style-type: none;
+}
+
+/*.nav li {
+  float: left;
+}*/
+
+.nav li a {
+  display: block;
+  /*height: 10px;*/
+  padding: 12px 18px 5px 18px;
+  vertical-align: middle;
+  color: darkslategray;
+}
+

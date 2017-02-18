@@ -8,13 +8,16 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SonOfCodSeafood.Models
 {
-    [Table("Newsletters")]
-    public class Newsletter
+    [Table("Members")]
+    public class Members
     {
         [Key]
-        public int Id { get; set; }
-        public string Description { get; set; }
+        public int MemberId { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public DateTime Birthdate { get; set; }
         public virtual ApplicationUser User { get; set; }
+
     }
 
 }
