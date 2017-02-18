@@ -4,8 +4,8 @@
 }
 
 <h2>Create Role</h2>
-<a asp-action="Index">List Roles</a> | <a asp-action="Manage">Manage User Role</a>
-@*@Html.ActionLink("List Roles", "Index") | @Html.ActionLink("Manage User Role", "ManageUserRoles")*@
+@*<a asp-action="Index">List Roles</a> | <a asp-action="Manage">Manage User Role</a>*@
+<p class="btn btn-default">@Html.ActionLink("List Roles", "Index")</p> | <p class="btn btn-default">@Html.ActionLink("Manage User Role", "ManageUserRoles")</p>
 <hr />
 @using (Html.BeginForm())
 {
@@ -19,4 +19,5 @@
         @Html.TextBox("RoleName")
     </p>
     <input type="submit" value="Save" />
+    <hr />
 }
