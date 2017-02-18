@@ -9,7 +9,8 @@ namespace SonOfCodSeafood.Models
 {
     public class ApplicationDbContext: IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext(DbContextOptions options) : base(options)
+            //public ApplicationDbContext(): base("DefaultConnection") - role
+            public ApplicationDbContext(DbContextOptions options) : base(options)
         {
 
         }

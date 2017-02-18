@@ -51,7 +51,7 @@ namespace SonOfCodSeafood
 
             app.UseIdentity();
 
-            //app.UseStaticFiles();
+            app.UseStaticFiles();
 
             app.UseMvc(routes =>
             {
