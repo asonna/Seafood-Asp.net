@@ -9,12 +9,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace SonOfCodSeafood.Models
 {
     [Table("Members")]
-    public class Members
+    public class Member
     {
         [Key]
         public int MemberId { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
+        public string phone { get; set; }
         public DateTime Birthdate { get; set; }
         public virtual ApplicationUser User { get; set; }
 

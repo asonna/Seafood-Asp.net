@@ -25,6 +25,11 @@ namespace SonOfCodSeafood.Controllers
             _signInManager = signInManager;
             _db = db;
         }
+
+        public AccountController()
+        {
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -40,7 +45,7 @@ namespace SonOfCodSeafood.Controllers
             IdentityResult result = await _userManager.CreateAsync(user, model.Password);
             if (result.Succeeded)
             {
-                return RedirectToAction("Index");
+                return RedirectToAction("Login");
             }
             else
             {

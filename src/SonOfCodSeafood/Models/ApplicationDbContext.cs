@@ -14,5 +14,11 @@ namespace SonOfCodSeafood.Models
         {
 
         }
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+        }
+        public DbSet<Member> Members { get; set; }
+
     }
 }

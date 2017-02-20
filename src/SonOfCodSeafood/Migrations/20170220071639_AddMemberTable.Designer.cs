@@ -8,8 +8,8 @@ using SonOfCodSeafood.Models;
 namespace SonOfCodSeafood.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20170217090406_initial")]
-    partial class initial
+    [Migration("20170220071639_AddMemberTable")]
+    partial class AddMemberTable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -173,6 +173,28 @@ namespace SonOfCodSeafood.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("SonOfCodSeafood.Models.Member", b =>
+                {
+                    b.Property<int>("MemberId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("Birthdate");
+
+                    b.Property<string>("Email");
+
+                    b.Property<string>("Name");
+
+                    b.Property<string>("UserId");
+
+                    b.Property<string>("phone");
+
+                    b.HasKey("MemberId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Members");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityRole")
@@ -208,6 +230,13 @@ namespace SonOfCodSeafood.Migrations
                         .WithMany("Roles")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("SonOfCodSeafood.Models.Member", b =>
+                {
+                    b.HasOne("SonOfCodSeafood.Models.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
                 });
         }
     }
