@@ -8,7 +8,7 @@ using SonOfCodSeafood.Models;
 namespace SonOfCodSeafood.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20170220071639_AddMemberTable")]
+    [Migration("20170221102903_AddMemberTable")]
     partial class AddMemberTable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -180,13 +180,16 @@ namespace SonOfCodSeafood.Migrations
 
                     b.Property<DateTime>("Birthdate");
 
-                    b.Property<string>("Email");
+                    b.Property<string>("Email")
+                        .IsRequired();
 
                     b.Property<string>("Name");
 
-                    b.Property<string>("UserId");
+                    b.Property<string>("Phone");
 
-                    b.Property<string>("phone");
+                    b.Property<string>("Role");
+
+                    b.Property<string>("UserId");
 
                     b.HasKey("MemberId");
 

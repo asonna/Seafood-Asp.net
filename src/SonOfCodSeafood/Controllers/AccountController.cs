@@ -26,10 +26,6 @@ namespace SonOfCodSeafood.Controllers
             _db = db;
         }
 
-        public AccountController()
-        {
-        }
-
         public IActionResult Index()
         {
             return View();
@@ -41,7 +37,7 @@ namespace SonOfCodSeafood.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
-            var user = new ApplicationUser { UserName = model.UserName, Email = model.Email };
+            var user = new ApplicationUser { UserName = model.UserName, Email = model.Email , };
             IdentityResult result = await _userManager.CreateAsync(user, model.Password);
             if (result.Succeeded)
             {

@@ -13,10 +13,13 @@ namespace SonOfCodSeafood.Models
     {
         [Key]
         public int MemberId { get; set; }
-        public string Name { get; set; }
+        [Required]
+        [EmailAddress]
         public string Email { get; set; }
-        public string phone { get; set; }
+        public string Name { get; set; }
+        public string Phone { get; set; }
         public DateTime Birthdate { get; set; }
+        public string Role { get; set; }
         public virtual ApplicationUser User { get; set; }
 
     }

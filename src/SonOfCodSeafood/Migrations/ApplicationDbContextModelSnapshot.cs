@@ -179,13 +179,16 @@ namespace SonOfCodSeafood.Migrations
 
                     b.Property<DateTime>("Birthdate");
 
-                    b.Property<string>("Email");
+                    b.Property<string>("Email")
+                        .IsRequired();
 
                     b.Property<string>("Name");
 
-                    b.Property<string>("UserId");
+                    b.Property<string>("Phone");
 
-                    b.Property<string>("phone");
+                    b.Property<string>("Role");
+
+                    b.Property<string>("UserId");
 
                     b.HasKey("MemberId");
 

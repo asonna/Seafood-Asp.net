@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Members";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model SonOfCodSeafood.Models.Member
+@if (User.IsInRole("Admin"))
+{
+    <h2>Members Emails List</h2>
+    foreach (var member in ViewBag.Members)
+    {
+        <p>member.Email</p>
+    }
+}
+else
+{
+    <h2>Register as user through the below link to receive our newsletter!</h2>
+    @Html.ActionLink("Sign in to receive our newsletter!!", "Index", "Account")
+}
+<hr />
