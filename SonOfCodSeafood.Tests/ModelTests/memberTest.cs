@@ -24,21 +24,5 @@ namespace SonOfCodSeafood.Tests
             //Assert
             Assert.Equal("mart@mart.com", result);
         }
-
-
-        [Fact]
-        public void Get_ViewResult_Index_Test()
-        {
-            //Arrange
-            AccountController controller = new AccountController();
-
-            //Act
-            var result = controller.Index();
-
-            //Assert
-            Assert.IsType<ViewResult>(result);
-        }
-
-
     }
 }

@@ -38,8 +38,8 @@ namespace SonOfCodSeafood.Tests.ControllerTests
         {
             //Arrange
             MemberListController controller = new MemberListController(_userManager, _signInManager, _db);
-            IActionResult actionResult = controller.List();
-            ViewResult listView = controller.List() as ViewResult;
+            IActionResult actionResult = controller.Entry();
+            ViewResult listView = controller.Entry() as ViewResult;
 
             //Act
             var result = listView.ViewData.Model;
