@@ -42,10 +42,7 @@ namespace SonOfCodSeafood.Controllers
         [Authorize]
         public IActionResult Index()
         {
-            //if (User.IsInRole("Admin"))
-            //{
                 ViewBag.Members = _db.Members.ToList();
-            //}
             return View();
         }
     }
