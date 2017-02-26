@@ -27,27 +27,5 @@ namespace SonOfCodSeafood.Controllers
         {
             return View();
         }
-
-        //public IActionResult Member()
-        //{
-        //    if (User.IsInRole("Admin"))
-        //    {
-        //        ViewBag.Members = _db.Members.ToList();
-        //    }
-        //    return View();
-        //}
-
-        //[HttpPost]
-        //public IActionResult Member(Member member)
-        //{
-        //    _db.Members.Add(member);
-        //    _db.SaveChanges();
-        //    return RedirectToAction("Added");
-        //}
-
-        //public IActionResult Added()
-        //{
-        //    return View();
-        //}
     }
 }

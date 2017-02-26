@@ -21,7 +21,7 @@
             <section class="nav">
                 <ul class="nav navbar-nav">
                     <li>@ViewBag.Home</li>
-                    <li class="active"><a href="ActionLink('Home', 'Index', 'Home')">Home</a></li>
+                    <li class="active">@Html.ActionLink("Home", "Index", "Home")</li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Our Products<span class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -30,7 +30,7 @@
                             <li><a href="#">Dried</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Our Members</a></li>
+                    <li class="active">@Html.ActionLink("Our Members", "Index", "MemberList")</li>
                     <li><a href="#">Newsletters</a></li>
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Contact Us</a></li>

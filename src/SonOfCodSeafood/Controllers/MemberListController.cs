@@ -36,14 +36,17 @@ namespace SonOfCodSeafood.Controllers
             newMember.Role = "Admin";
             _db.Members.Add(newMember);
             _db.SaveChanges();
-            return RedirectToAction("Index", "MemberList");
+            return RedirectToAction("Index");
         }
 
         [Authorize]
         public IActionResult Index()
         {
-            List<Member> allMembers = _db.Members.ToList();
-            return View(allMembers);
+            //if (User.IsInRole("Admin"))
+            //{
+                ViewBag.Members = _db.Members.ToList();
+            //}
+            return View();
         }
     }
 }

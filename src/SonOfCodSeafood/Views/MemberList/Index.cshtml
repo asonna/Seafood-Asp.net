@@ -2,21 +2,14 @@
     ViewData["Title"] = "Member";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 @model SonOfCodSeafood.Models.Member
-@if (User.IsInRole("Admin"))
+
+<h2>Members Email List</h2>
+@foreach(var member in ViewBag.Members)
 {
-    <h2>Members Emails List</h2>
-    foreach (var member in ViewBag.Members)
-    {
-        <div>
-            <p>member.Name</p>
-            <p>member.Email</p>
-        </div>
-    }
-}
-else
-{
-    <h2>Register as user through the below link to receive our newsletter!</h2>
-    @Html.ActionLink("Sign in to receive our newsletter!!", "Index", "Account")
+    <div>
+        <p> @member.Name | @member.Email </p>
+    </div><br />
 }
 <hr />

@@ -6,7 +6,7 @@
 @model SonOfCodSeafood.Models.Member
 
 
-<h2>Add user contacts to join member list</h2>
+<h2>Add user contacts to join our newsletter memberlist</h2>
 <hr />
 
 <h3>New member</h3>
@@ -32,71 +32,9 @@
             @Html.LabelFor(model => model.Birthdate)
             @Html.TextBoxFor(model => model.Birthdate)
         </div>
-        @*<div class="col-xs-6">
-                @Html.LabelFor(model => model.Role)
-                @Html.DropDownList("Role.Name")
-            </div>*@
-        @*<div class="col-xs-6">
-                @Html.LabelFor(model => model.Id)
-                @Html.DropDownList("UserId")
-            </div>*@
+
 </div>
     <br /><br /><p><input type="submit" value="enter member details" class="btn btn-default" /></p>
 }
     <hr />
-    <button class="btn btn-default">@Html.ActionLink("Back to member list", "Index")</button><hr />
-
-
-
-@*@{
-    ViewData["Title"] = "Member";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
-
-@model SonOfCodSeafood.Models.Member
-
-
-<h2>Add user contacts to join member list</h2>
-<hr />
-
-<h3>New member</h3>
-<br @if (User != "") {  @using (Html.BeginForm()) { <div class="row">
-    <div class="col-xs-6">
-        @Html.LabelFor(model => model.Email)
-        @Html.TextBoxFor(model => model.Email)
-    </div>
-
-    <div class="col-xs-6">
-        @Html.LabelFor(model => model.Name)
-        @Html.TextBoxFor(model => model.Name)
-    </div>
-    <div class="col-xs-6">
-        @Html.LabelFor(model => model.Phone)
-        @Html.TextBoxFor(model => model.Phone)
-    </div>
-    <div class="col-xs-6">
-        @Html.LabelFor(model => model.Birthdate)
-        @Html.TextBoxFor(model => model.Birthdate)
-    </div>
-    @*<div class="col-xs-6">
-            @Html.LabelFor(model => model.Role)
-            @Html.DropDownList("Role.Name")
-        </div>*@
-    @*<div class="col-xs-6">
-            @Html.LabelFor(model => model.Id)
-            @Html.DropDownList("UserId")
-        </div>*@
-</div>
-        <br /><br /><p><input type="submit" value="enter member details" class="btn btn-default" /></p>
-}
-    <br />
-    <button class="btn btn-default">@Html.ActionLink("Back to member list", "List")</button><br />
-}
-else
-{
-    <p> Please you need to register as a user through below link:</p>
-
-    <br />
-    <button class="btn btn-default">@Html.ActionLink("Register", "Register", "Account")</button><br />
-}*@
-
+    <button class="btn btn-default">@Html.ActionLink("Back to newsletter memberlist", "Index")</button><hr />
