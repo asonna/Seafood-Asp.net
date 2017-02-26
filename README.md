@@ -1,6 +1,6 @@
 ﻿# Son Of Cod Seafood
 ####ASP.NET Epicodus independent project
-####By: Annie Sonna
+####By: Annie Sonna on 02/17/2017
 
 This README outlines the details of collaborating on this ASP.NET application.
 
